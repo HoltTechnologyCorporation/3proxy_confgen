@@ -1,0 +1,5 @@
+syntax: regexp
+^config$
+^test\.py$
+^var/
+^conf/3proxy\.conf$

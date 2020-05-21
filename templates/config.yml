@@ -1,0 +1,25 @@
+---
+# This is IPs of servers allowed to use middle-server
+whitelist_ips:
+  - 127.0.0.1
+  - CLIENT-IP
+
+# This is IP of middle-server
+listen_ip: SERVER-IP
+
+3proxy_config: |
+  nserver 8.8.8.8
+  nserver 1.1.1.1
+  nscache 65536
+
+upstreams:
+  - name: some-proxy-id
+    username: some-username
+    password: some-password
+    # this port will be assigned to first upstream server,
+    # then port + 1 will be assigned to second upstream server, and so on
+    start_listen_port: 10000
+    # "socks" or "http"
+    mode: socks
+    # upstream servers
+    proxy_file: var/proxy_file.txt
