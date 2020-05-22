@@ -1,5 +1,15 @@
+syntax:glob
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.orig
+
+pip-log.txt
+
 syntax: regexp
-^config$
-^test\.py$
+^\.env/
 ^var/
-^conf/3proxy\.conf$
+^\.git/
+^conf/
+^proxychains\.conf$
