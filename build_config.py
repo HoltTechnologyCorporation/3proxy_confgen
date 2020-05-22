@@ -14,7 +14,7 @@ def load_servers(fname):
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('action')
+    parser.add_argument('action', choices=['3proxy-conf', 'proxy-list'])
     parser.add_argument('upstreams')
     opts = parser.parse_args()
 
